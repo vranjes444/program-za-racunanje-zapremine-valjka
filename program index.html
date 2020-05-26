@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+<form name = "Calculator">
+    Poluprecnik (r2) : <input type="text" name = "Prvi " placeholder="Poluprecnik na kvadrat"> 
+      <br>
+    Visina (H): <input type ="text"name = "Drugi" placeholder="Visina">
+    <br>
+    
+    zapremina (V): <input type="button"value="izracunaj"onClick="multiply()">
+    
+
+  
+</form>
+<script type="text/javascript">
+function multiply (){
+    const PI=3.14;
+
+    var prvi=parseFloat(Calculator.Prvi.value);
+    var drugi= parseFloat(Calculator.Drugi.value);
+    
+    var Rezultat=Prvi*Drugi*PI;
+    Calculator.Rezultat.value=Rezultat;
+    console.log(Rezultat);
+    prompt(Zapremina je",+ Rezultat);
+}
+
+</script>
+
+    
+</body>
+</html>
