@@ -8,27 +8,30 @@
 </head>
 <body>
 <form name = "Calculator">
-    Poluprecnik (r2) : <input type="text" name = "Prvi " placeholder="Poluprecnik na kvadrat"> 
+    Poluprecnik (r) : <input type="text" id="prvi" name="prvi" placeholder="Poluprecnik na kvadrat"> 
       <br>
-    Visina (H): <input type ="text"name = "Drugi" placeholder="Visina">
+    Visina (H): <input type="text" id="drugi" name="drugi" placeholder="Visina">
     <br>
-    
-    zapremina (V): <input type="button"value="izracunaj"onClick="multiply()">
+    <div id="rezultat"></div>
+    zapremina (V): <input type="button" value="izracunaj" onClick="multiply()">
     
 
-  
+ 
 </form>
 <script type="text/javascript">
 function multiply (){
     const PI=3.14;
 
-    var prvi=parseFloat(Calculator.Prvi.value);
-    var drugi= parseFloat(Calculator.Drugi.value);
+ var vrednostPrvi = document.getElementById('prvi').value;
+ var vrednostDrugi = document.getElementById('drugi').value;
+ console.log(vrednostPrvi);
+
+    var prvi=parseFloat(vrednostPrvi);
+    var drugi= parseFloat(vrednostDrugi);
     
-    var Rezultat=Prvi*Drugi*PI;
-    Calculator.Rezultat.value=Rezultat;
-    console.log(Rezultat);
-    prompt(Zapremina je",+ Rezultat);
+    var rezultat=prvi*drugi*PI;
+    document.getElementById('rezultat').innerHTML = rezultat;
+    alert("Zapremina je"+ rezultat);
 }
 
 </script>
