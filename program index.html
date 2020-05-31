@@ -2,39 +2,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dokument</title>
-    <link rel="stylesheet"href="CSS JS.css">
+    
+   
 </head>
 <body>
-    <h2>Zapremina valjka</h2>
-    <h4>V = r2*p*H</h4>
+    <script>
+   var R =prompt("unesite vrednost za poluprecnik");
+   var H =prompt("unesite vrednpst za visinu");
+   const P= 3.14
+   var sum = parseInt(R) * parseInt(R)*P* parseInt(H);
+   alert("sum is:"+sum);
     
-    <p>r2 =poluprecnik osnove valjka</p>
-    <p>H = visina valjka</p>
-    <p>p = (konstanta)=3,14</p>
-
-    <div class="form_1">
-        <label>poluprecnik osnove valjka (r2):</label>
-        <br>
-        <input id="pov" type="number" onchange="math()">
-        <br>
-        <label>visina valjka (H): </label>
-        <input id="vv" type="number" onchange="math()">
-        <br>
-        <label>Zapremina(v):</label>
-        <br>
-        <input id="Zapremina" type="number" disabled value =3.14>
-        <br>
-    </div>
-<script>
-    function math(){
-        var pov = document.getElementById("pov").value;
-        var pov =document.getElementById("vv").value;
-        var Zapremina=document.getElementById("Zapremina");
-        Zapremina.value =Math.PI*pov*vv*pov;
-    }
 </script>
 
     
