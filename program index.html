@@ -4,36 +4,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculator</title>
+    <title>Dokument</title>
+    <link rel="stylesheet"href="CSS JS.css">
 </head>
 <body>
-<form name = "Calculator">
-    Poluprecnik (r) : <input type="text" id="prvi" name="prvi" placeholder="Poluprecnik na kvadrat"> 
-      <br>
-    Visina (H): <input type="text" id="drugi" name="drugi" placeholder="Visina">
-    <br>
-    <div id="rezultat"></div>
-    zapremina (V): <input type="button" value="izracunaj" onClick="multiply()">
+    <h2>Zapremina valjka</h2>
+    <h4>V = r2*p*H</h4>
     
+    <p>r2 =poluprecnik osnove valjka</p>
+    <p>H = visina valjka</p>
+    <p>p = (konstanta)=3,14</p>
 
- 
-</form>
-<script type="text/javascript">
-function multiply (){
-    const PI=3.14;
-
- var vrednostPrvi = document.getElementById('prvi').value;
- var vrednostDrugi = document.getElementById('drugi').value;
- console.log(vrednostPrvi);
-
-    var prvi=parseFloat(vrednostPrvi);
-    var drugi= parseFloat(vrednostDrugi);
-    
-    var rezultat=prvi*drugi*PI;
-    document.getElementById('rezultat').innerHTML = rezultat;
-    alert("Zapremina je"+ rezultat);
-}
-
+    <div class="form_1">
+        <label>poluprecnik osnove valjka (r2):</label>
+        <br>
+        <input id="pov" type="number" onchange="math()">
+        <br>
+        <label>visina valjka (H): </label>
+        <input id="vv" type="number" onchange="math()">
+        <br>
+        <label>Zapremina(v):</label>
+        <br>
+        <input id="Zapremina" type="number" disabled value =3.14>
+        <br>
+    </div>
+<script>
+    function math(){
+        var pov = document.getElementById("pov").value;
+        var pov =document.getElementById("vv").value;
+        var Zapremina=document.getElementById("Zapremina");
+        Zapremina.value =Math.PI*pov*vv*pov;
+    }
 </script>
 
     
